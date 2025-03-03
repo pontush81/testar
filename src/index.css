@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add prose styling for rich text content */
+.prose {
+  max-width: 65ch;
+  color: inherit;
+}
+
+.prose a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.prose h1 {
+  font-size: 2em;
+}
+
+.prose h2 {
+  font-size: 1.5em;
+}
+
+.prose h3 {
+  font-size: 1.25em;
+}
+
+.prose p, .prose ul, .prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+.prose blockquote {
+  border-left: 4px solid #4B5563;
+  padding-left: 1em;
+  font-style: italic;
+  margin: 1em 0;
+}
+
+.prose-invert {
+  color: #e5e7eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .prose {
+    font-size: 0.9em;
+  }
+  
+  .prose h1 {
+    font-size: 1.8em;
+  }
+  
+  .prose h2 {
+    font-size: 1.4em;
+  }
+  
+  .prose h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Markdown editor styles */
+.markdown-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #4B5563;
+}
+
+.markdown-toolbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.markdown-toolbar button:hover {
+  background-color: rgba(107, 114, 128, 0.2);
+}
+
+.markdown-editor {
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  resize: vertical;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.markdown-preview {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Helper classes */
+.markdown-help {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 0.25rem;
+}
+
+.markdown-help h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.markdown-help table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-help th, .markdown-help td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.markdown-help code {
+  padding: 0.2rem 0.4rem;
+  background-color: rgba(107, 114, 128, 0.2);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Textarea styles */
+#markdown-editor {
+  padding-top: 1rem;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
